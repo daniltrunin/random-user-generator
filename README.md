@@ -25,5 +25,9 @@ Make history of saved users
 ```
 
 ```sh
-When application first starts make API request and fill store with the data
+When application first starts fill store with null
+```
+
+```sh
+Loading icon while loading
 ```
