@@ -1,0 +1,12 @@
+@import './base.css';
+
+#app {
+  margin: 0 auto;
+  padding: 0;
+
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}

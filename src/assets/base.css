@@ -1,0 +1,75 @@
+:root {
+  --primary-font-color: #000000;
+}
+
+:root {
+  --primary-background-color: #ffffff;
+}
+
+:root {
+  --block-naming-font-weight: 500;
+  --block-naming-font-size: 16px;
+
+  --key-font-weight: 400;
+  --key-font-size: 16px;
+
+  --value-font-weight: 300;
+  --value-font-size: 14px;
+
+  --fullname-font-size: 32px;
+}
+
+:root {
+  --button-background-color: rgb(238, 238, 238);
+  --button-background-color-hover: rgb(226, 226, 226);
+  --button-color: black;
+
+  --button-font-weight: 500;
+  --button-font-size: 16px;
+}
+
+:root {
+  --data-column-gap: 14px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-weight: normal;
+  font-size: 14px;
+  line-height: normal;
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+
+  color: var(--primary-font-color);
+  background: var(--primary-background-color);
+
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+
+  font-family:
+    Inter,
+    'Fira Sans',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
