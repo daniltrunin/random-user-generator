@@ -6,17 +6,17 @@
 <h4 align="center">Created by frontend developer from Orenburg, Russia — <a href="https://github.com/daniltrunin" target="_blank">Daniil</a></h4>
 
 > [!IMPORTANT]
-> — Activate application and generate a random user
-> — Click 'CHANGE' to generate new random user
-> — Application uses the randomuser.me API
-> — Vuetify ui-component library
+> — Activate application and generate a random user.
+> — Click 'CHANGE' to generate new random user.
+> — Application uses the randomuser.me API.
+> — Vuetify ui-component library.
 
-> [!ADD]
-> — Copy by click on any value text
-> — Better desing provided with Vuetify
-> — Layout based on different resolutions and page sizes
-> — Save data to localStorage by clicking on 'SAVE' button and render history of this users
-> — Click on saved user and render him on a page
+> [!IMPORTANT]
+> — Copy by click on any value text.
+> — Better desing provided with Vuetify.
+> — Layout based on different resolutions and page sizes.
+> — Save data to localStorage by clicking on 'SAVE' button and render history of this users.
+> — Click on saved user and render him on a page.
 
 ![screenshot](./public/presentation.gif)
 
