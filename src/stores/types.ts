@@ -48,9 +48,9 @@ export interface User {
     value: string | null;
   };
   picture: {
-    large: string | null;
-    medium: string | null;
-    thumbnail: string | null;
+    large: string | undefined;
+    medium: string | undefined;
+    thumbnail: string | undefined;
   };
   nat: string | null;
 }

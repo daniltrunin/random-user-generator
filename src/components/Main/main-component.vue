@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import styles from './main-component.module.css';
 
-const props = defineProps({
-  state: Object,
-});
+import useMainStore from '../../stores/store.ts';
+const mainStore = useMainStore();
+const mainState = mainStore.state;
 </script>
 
 <template>
   <div :class="styles.main">
     <h1 :class="styles.fullname">
-      {{ props.state.name.title }} {{ props.state.name.first }} {{ props.state.name.last }}
+      {{ mainState.name.title }} {{ mainState.name.first }} {{ mainState.name.last }}
     </h1>
     <div :class="styles.block"></div>
 
@@ -22,39 +22,39 @@ const props = defineProps({
           <div :class="styles.data">
             <span :class="styles.key">Street</span
             ><span :class="styles.value"
-              >{{ props.state.location.street.number }} {{ props.state.location.street.name }}</span
+              >{{ mainState.location.street.number }} {{ mainState.location.street.name }}</span
             >
           </div>
           <div :class="styles.data">
             <span :class="styles.key">City</span
-            ><span :class="styles.value">{{ props.state.location.city }}</span>
+            ><span :class="styles.value">{{ mainState.location.city }}</span>
           </div>
           <div :class="styles.data">
             <span :class="styles.key">State</span
-            ><span :class="styles.value">{{ props.state.location.state }}</span>
+            ><span :class="styles.value">{{ mainState.location.state }}</span>
           </div>
           <div :class="styles.data">
             <span :class="styles.key">Country</span
-            ><span :class="styles.value">{{ props.state.location.country }}</span>
+            ><span :class="styles.value">{{ mainState.location.country }}</span>
           </div>
         </div>
         <div :class="[styles.block, styles['block-right']]">
           <div :class="styles.data">
             <span :class="styles.key">Postcode</span
-            ><span :class="styles.value">{{ props.state.location.postcode }}</span>
+            ><span :class="styles.value">{{ mainState.location.postcode }}</span>
           </div>
           <div :class="styles.data">
             <span :class="styles.key">Coordinates</span
             ><span :class="styles.value"
-              >{{ props.state.location.coordinates.latitude }}
-              {{ props.state.location.coordinates.longitude }}</span
+              >{{ mainState.location.coordinates.latitude }}
+              {{ mainState.location.coordinates.longitude }}</span
             >
           </div>
           <div :class="styles.data">
             <span :class="styles.key">Timezone</span
             ><span :class="styles.value"
-              >{{ props.state.location.timezone.offset }}
-              {{ props.state.location.timezone.description }}</span
+              >{{ mainState.location.timezone.offset }}
+              {{ mainState.location.timezone.description }}</span
             >
           </div>
         </div>
@@ -69,31 +69,31 @@ const props = defineProps({
         <div :class="[styles.block, styles['block-left']]">
           <div :class="styles.data">
             <span :class="styles.key">uuid</span
-            ><span :class="styles.value">{{ props.state.login.uuid }}</span>
+            ><span :class="styles.value">{{ mainState.login.uuid }}</span>
           </div>
           <div :class="styles.data">
             <span :class="styles.key">Login</span
-            ><span :class="styles.value">{{ props.state.login.username }}</span>
+            ><span :class="styles.value">{{ mainState.login.username }}</span>
           </div>
           <div :class="styles.data">
             <span :class="styles.key">Password</span
-            ><span :class="styles.value">{{ props.state.login.password }}</span>
+            ><span :class="styles.value">{{ mainState.login.password }}</span>
           </div>
           <div :class="styles.data">
             <span :class="styles.key">Salt</span
-            ><span :class="styles.value">{{ props.state.login.salt }}</span>
+            ><span :class="styles.value">{{ mainState.login.salt }}</span>
           </div>
           <div :class="styles.data">
             <span :class="styles.key">MD5</span
-            ><span :class="styles.value">{{ props.state.login.md5 }}</span>
+            ><span :class="styles.value">{{ mainState.login.md5 }}</span>
           </div>
           <div :class="styles.data">
             <span :class="styles.key">SHA1</span
-            ><span :class="styles.value">{{ props.state.login.sha1 }}</span>
+            ><span :class="styles.value">{{ mainState.login.sha1 }}</span>
           </div>
           <div :class="styles.data">
             <span :class="styles.key">SHA256</span
-            ><span :class="styles.value">{{ props.state.login.sha256 }}</span>
+            ><span :class="styles.value">{{ mainState.login.sha256 }}</span>
           </div>
         </div>
       </div>
@@ -107,11 +107,11 @@ const props = defineProps({
         <div :class="[styles.block, styles['block-left']]">
           <div :class="styles.data">
             <span :class="styles.key">Date</span
-            ><span :class="styles.value">{{ props.state.registered.date.slice(0, 10) }}</span>
+            ><span :class="styles.value">{{ mainState.registered.date }}</span>
           </div>
           <div :class="styles.data">
             <span :class="styles.key">Age</span
-            ><span :class="styles.value">{{ props.state.registered.age }}</span>
+            ><span :class="styles.value">{{ mainState.registered.age }}</span>
           </div>
         </div>
       </div>
@@ -123,15 +123,15 @@ const props = defineProps({
       <div :class="[styles.block, styles['block-left']]">
         <div :class="styles.data">
           <span :class="styles.key">Phone</span
-          ><span :class="styles.value">{{ props.state.phone }}</span>
+          ><span :class="styles.value">{{ mainState.phone }}</span>
         </div>
         <div :class="styles.data">
           <span :class="styles.key">Cell</span
-          ><span :class="styles.value">{{ props.state.cell }}</span>
+          ><span :class="styles.value">{{ mainState.cell }}</span>
         </div>
         <div :class="styles.data">
           <span :class="styles.key">id</span
-          ><span :class="styles.value">{{ props.state.id.name }} {{ props.state.id.value }}</span>
+          ><span :class="styles.value">{{ mainState.id.name }} {{ mainState.id.value }}</span>
         </div>
       </div>
     </div>

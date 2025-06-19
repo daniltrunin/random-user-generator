@@ -23,11 +23,3 @@ Save this data to localStorage by clicking on SAVE button
 ```sh
 Make history of saved users
 ```
-
-```sh
-When application first starts fill store with null
-```
-
-```sh
-Loading icon while loading
-```

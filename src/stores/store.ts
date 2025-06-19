@@ -1,6 +1,7 @@
 import { ref } from 'vue';
 import { defineStore } from 'pinia';
 import type { User } from './types.ts';
+import request from '../services/request.ts';
 
 const useMainStore = defineStore('mainStore', () => {
   const state = ref<User>({
@@ -53,23 +54,31 @@ const useMainStore = defineStore('mainStore', () => {
       value: null,
     },
     picture: {
-      large: null,
-      medium: null,
-      thumbnail: null,
+      large: undefined,
+      medium: undefined,
+      thumbnail: undefined,
     },
     nat: null,
   });
 
-  const isNullState = ref({
-    isNull: true,
-  });
+  const isNull = ref(true);
 
-  const handleChange = () => {
-    state.value.gender = 'Male';
-    // Добавить функционал -> По клику делает запрос на API и меняет на новые данные
+  const handleStart = async () => {
+    const result = await request();
+    Object.assign(state.value, result);
+    isNull.value = false;
+
+    console.log('handleStart: ', result);
   };
 
-  return { state, isNullState, handleChange };
+  const handleChange = async () => {
+    const result = await request();
+    Object.assign(state.value, result);
+
+    console.log('handleChange: ', result);
+  };
+
+  return { state, isNull, handleStart, handleChange };
 });
 
 export default useMainStore;
